@@ -40,7 +40,6 @@ namespace Lab.Tp1
                 }
 
                 int cantidadPasajeros = Convert.ToInt32(cantidad);
-                //int cantidadPasajeros = Convert.ToInt32(Console.ReadLine());
 
                 if (transporte == "a")
                 {
