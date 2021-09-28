@@ -1,4 +1,4 @@
-namespace Lab.Tp3.Entities
+namespace Lab.Tp7.Entities
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;

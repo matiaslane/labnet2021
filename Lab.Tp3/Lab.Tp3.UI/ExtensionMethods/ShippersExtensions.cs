@@ -1,8 +1,8 @@
-﻿using Lab.Tp3.Entities;
-using Lab.Tp3.Logic;
+﻿using Lab.Tp7.Entities;
+using Lab.Tp7.Logic;
 using System;
 
-namespace Lab.Tp3.UI.ExtensionMethods
+namespace Lab.Tp7.UI.ExtensionMethods
 {
     public static class ShippersExtensions
     {

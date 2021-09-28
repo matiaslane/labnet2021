@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Lab.Tp3.UI.ExtensionMethods
+namespace Lab.Tp7.UI.ExtensionMethods
 {
     public static class ValidationsExtensions
     {

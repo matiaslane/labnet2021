@@ -1,4 +1,4 @@
-﻿namespace Lab.Tp3.Logic
+﻿namespace Lab.Tp7.Logic
 {
     public interface ILogic<T>
     {

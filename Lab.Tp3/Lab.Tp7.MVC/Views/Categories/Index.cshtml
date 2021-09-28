@@ -1,0 +1,25 @@
+﻿@model List<Lab.Tp7.MVC.Models.CategoriesView>
+
+@{
+    ViewBag.Title = "Categories Page";
+}
+
+<h3>Listado Categorias:</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Categoria</th>
+            <th scope="col">Descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var categoria in Model)
+            {
+                <tr>
+                    <td>@categoria.Name</td>
+                    <td>@categoria.Description</td>
+                </tr>
+            }
+    </tbody>
+</table>

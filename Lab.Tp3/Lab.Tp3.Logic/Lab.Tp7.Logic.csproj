@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{176D7218-1B1D-417F-8871-1A629DC40CEA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Lab.Tp3.UI</RootNamespace>
-    <AssemblyName>Lab.Tp3.UI</AssemblyName>
+    <ProjectGuid>{50D6B849-413D-44ED-9261-E4821E6198F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lab.Tp3.Logic</RootNamespace>
+    <AssemblyName>Lab.Tp3.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -50,24 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtensionMethods\CategoriesExtensions.cs" />
-    <Compile Include="ExtensionMethods\ShippersExtensions.cs" />
-    <Compile Include="ExtensionMethods\ValidationsExtensions.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BaseLogic.cs" />
+    <Compile Include="CategoriesLogic.cs" />
+    <Compile Include="ILogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShippersLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lab.Tp3.Entities\Lab.Tp3.Entities.csproj">
-      <Project>{02979337-B096-46C1-A578-594AB2000F23}</Project>
-      <Name>Lab.Tp3.Entities</Name>
+    <ProjectReference Include="..\Lab.Tp3.Data\Lab.Tp7.Data.csproj">
+      <Project>{4247F9FE-3664-4FA2-B26F-8014CDCBACB4}</Project>
+      <Name>Lab.Tp7.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Lab.Tp3.Logic\Lab.Tp3.Logic.csproj">
-      <Project>{50D6B849-413D-44ED-9261-E4821E6198F6}</Project>
-      <Name>Lab.Tp3.Logic</Name>
+    <ProjectReference Include="..\Lab.Tp3.Entities\Lab.Tp7.Entities.csproj">
+      <Project>{02979337-B096-46C1-A578-594AB2000F23}</Project>
+      <Name>Lab.Tp7.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

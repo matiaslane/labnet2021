@@ -1,6 +1,6 @@
-﻿using Lab.Tp3.Data;
+﻿using Lab.Tp7.Data;
 
-namespace Lab.Tp3.Logic
+namespace Lab.Tp7.Logic
 {
     public class BaseLogic
     {

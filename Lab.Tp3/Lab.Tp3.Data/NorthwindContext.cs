@@ -1,7 +1,7 @@
-using Lab.Tp3.Entities;
+using Lab.Tp7.Entities;
 using System.Data.Entity;
 
-namespace Lab.Tp3.Data
+namespace Lab.Tp7.Data
 {
     public partial class NorthwindContext : DbContext
     {

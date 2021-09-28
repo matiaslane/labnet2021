@@ -1,0 +1,25 @@
+﻿@model List<Lab.Tp7.MVC.Models.ShippersView>
+
+@{
+    ViewBag.Title = "Shippers Page";
+}
+
+<h3>Listado de Shippers</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre de la Compania</th>
+            <th scope="col">Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shipper in Model)
+        {
+            <tr>
+                <td>@shipper.CompanyName</td>
+                <td>@shipper.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>

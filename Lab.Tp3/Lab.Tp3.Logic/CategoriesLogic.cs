@@ -1,8 +1,8 @@
-﻿using Lab.Tp3.Entities;
+﻿using Lab.Tp7.Entities;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Lab.Tp3.Logic
+namespace Lab.Tp7.Logic
 {
     public class CategoriesLogic : BaseLogic
     {

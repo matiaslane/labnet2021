@@ -1,8 +1,8 @@
-﻿using Lab.Tp3.Logic;
-using Lab.Tp3.UI.ExtensionMethods;
+﻿using Lab.Tp7.Logic;
+using Lab.Tp7.UI.ExtensionMethods;
 using System;
 
-namespace Lab.Tp3.UI
+namespace Lab.Tp7.UI
 {
     class Program
     {
