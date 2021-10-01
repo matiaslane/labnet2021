@@ -22,13 +22,20 @@ namespace Lab.Tp7.Logic
 
         public void Add(ShippersModel shippersModel)
         {
-            Shippers shipper = new Shippers
+            try
             {
-                CompanyName = shippersModel.Name,
-                Phone = shippersModel.Phone
-            };
-            context.Shippers.Add(shipper);
-            context.SaveChanges();
+                Shippers shipper = new Shippers
+                {
+                    CompanyName = shippersModel.Name,
+                    Phone = shippersModel.Phone
+                };
+                context.Shippers.Add(shipper);
+                context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
 
         public void Delete(int id)

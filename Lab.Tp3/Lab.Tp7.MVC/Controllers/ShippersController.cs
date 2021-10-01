@@ -28,7 +28,8 @@ namespace Lab.Tp7.MVC.Controllers
             }
             catch (Exception ex)
             {
-                return RedirectToAction("Index", "Error", new { ex.Message });
+                ViewBag.Error = ex.Message;
+                return View("~/Views/Error/Index.cshtml");
             }
         }
 
@@ -50,7 +51,8 @@ namespace Lab.Tp7.MVC.Controllers
             }
             catch (Exception ex)
             {
-                return RedirectToAction("Index", "Error", new { ex.Message });
+                ViewBag.Error = ex.Message;
+                return View("~/Views/Error/Index.cshtml");
             }
         }
 

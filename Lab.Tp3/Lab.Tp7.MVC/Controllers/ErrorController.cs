@@ -6,7 +6,7 @@ namespace Lab.Tp7.MVC.Controllers
     {
         public ActionResult Index(string errorMessage)
         {
-            ViewBag.Message = errorMessage;
+            ViewBag.Error = errorMessage;
             return View();
         }
 
