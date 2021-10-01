@@ -1,10 +1,12 @@
-﻿@model List<Lab.Tp7.MVC.Models.ShippersView>
+﻿@model List<Lab.Tp7.Common.Models.ShippersModel>
 
 @{
     ViewBag.Title = "Shippers Page";
 }
 
+
 <h3>Listado de Shippers</h3>
+
 
 <table class="table">
     <thead>
@@ -17,9 +19,16 @@
         @foreach (var shipper in Model)
         {
             <tr>
-                <td>@shipper.CompanyName</td>
+                <td>@shipper.Name</td>
                 <td>@shipper.Phone</td>
+                <td>@Html.ActionLink("Modificar", "Update", new { id = shipper.Id, name = shipper.Name, phone = shipper.Phone }, new { @Class = "btn btn-info" })</td>
+                <td>@Html.ActionLink("Borrar", "Delete", new { id = shipper.Id }, new { @class = "btn btn-danger" , onclick =" return confirm ('¿esta seguro de borrar?')"})</td>
             </tr>
         }
     </tbody>
 </table>
+<div>
+    @Html.ActionLink("Insertar Nuevo Shipper", "Insert",null, new { @class= "btn btn-info" })
+</div>
+
+

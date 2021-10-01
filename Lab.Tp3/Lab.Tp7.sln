@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Tp7.Entities", "Lab.Tp3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Tp7.MVC", "Lab.Tp7.MVC\Lab.Tp7.MVC.csproj", "{C75504DB-C091-4D24-ABE5-CA5B8640361C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Tp7.Common", "Lab.Tp7.Common\Lab.Tp7.Common.csproj", "{2F61480C-A057-4CC7-B777-51F95BB874FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C75504DB-C091-4D24-ABE5-CA5B8640361C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C75504DB-C091-4D24-ABE5-CA5B8640361C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C75504DB-C091-4D24-ABE5-CA5B8640361C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F61480C-A057-4CC7-B777-51F95BB874FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F61480C-A057-4CC7-B777-51F95BB874FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F61480C-A057-4CC7-B777-51F95BB874FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F61480C-A057-4CC7-B777-51F95BB874FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

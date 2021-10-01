@@ -8,8 +8,8 @@ namespace Lab.Tp7.UI
     {
         static void Main(string[] args)
         {
-            ShippersLogic shippersLogic = new ShippersLogic();
-            CategoriesLogic categoriesLogic = new CategoriesLogic();
+            IShippersLogic shippersLogic = new ShippersLogic();
+            ICategoriesLogic categoriesLogic = new CategoriesLogic();
             
             int condicion = 0;
             do

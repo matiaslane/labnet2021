@@ -1,14 +1,21 @@
-﻿using Lab.Tp7.Entities;
+﻿using Lab.Tp7.Common.Models;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Lab.Tp7.Logic
 {
-    public class CategoriesLogic : BaseLogic
+    public class CategoriesLogic : BaseLogic, ICategoriesLogic
     {
-        public List<Categories> GetAll()
+        public List<CategoriesModel> GetAll()
         {
-            return context.Categories.ToList();
+            List<CategoriesModel> categories = context.Categories.Select(c => new CategoriesModel
+            {
+                Id = c.CategoryID,
+                Name = c.CategoryName,
+                Description = c.Description
+            }).ToList();
+
+            return categories;
         }
     }
 }
