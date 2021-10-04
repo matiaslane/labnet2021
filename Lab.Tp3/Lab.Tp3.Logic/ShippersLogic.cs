@@ -1,5 +1,4 @@
-﻿using Lab.Tp7.Logic;
-using Lab.Tp7.Common.Models;
+﻿using Lab.Tp7.Common.Models;
 using Lab.Tp7.Entities;
 using System;
 using System.Collections.Generic;
@@ -34,7 +33,7 @@ namespace Lab.Tp7.Logic
             }
             catch (Exception)
             {
-                return;
+                throw;
             }
         }
 
@@ -48,7 +47,7 @@ namespace Lab.Tp7.Logic
             }
             catch (Exception)
             {
-                return;
+                throw;
             }
         }
 

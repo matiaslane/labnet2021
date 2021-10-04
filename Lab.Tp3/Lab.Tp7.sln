@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Tp7.MVC", "Lab.Tp7.MVC\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Tp7.Common", "Lab.Tp7.Common\Lab.Tp7.Common.csproj", "{2F61480C-A057-4CC7-B777-51F95BB874FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Tp8.Api", "Lab.Tp8.Api\Lab.Tp8.Api.csproj", "{F9F590EC-6590-47E1-83E6-A359238A469D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Tp8.Repository.StarWars", "Lab.Tp8.Repository.StarWars\Lab.Tp8.Repository.StarWars.csproj", "{6BF55DBF-91F3-4951-A031-C66DDE260076}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{2F61480C-A057-4CC7-B777-51F95BB874FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F61480C-A057-4CC7-B777-51F95BB874FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F61480C-A057-4CC7-B777-51F95BB874FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F590EC-6590-47E1-83E6-A359238A469D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F590EC-6590-47E1-83E6-A359238A469D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F590EC-6590-47E1-83E6-A359238A469D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F590EC-6590-47E1-83E6-A359238A469D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF55DBF-91F3-4951-A031-C66DDE260076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF55DBF-91F3-4951-A031-C66DDE260076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF55DBF-91F3-4951-A031-C66DDE260076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF55DBF-91F3-4951-A031-C66DDE260076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

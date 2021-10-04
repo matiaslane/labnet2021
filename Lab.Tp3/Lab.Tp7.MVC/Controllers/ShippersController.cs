@@ -1,6 +1,5 @@
 ﻿using Lab.Tp7.Common.Models;
 using Lab.Tp7.Logic;
-using System;
 using System.Web.Mvc;
 
 namespace Lab.Tp7.MVC.Controllers
@@ -21,16 +20,8 @@ namespace Lab.Tp7.MVC.Controllers
         [HttpPost]
         public ActionResult Insert(ShippersModel shipperModel)
         {
-            try
-            {
-                shippersLogic.Add(shipperModel);
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ViewBag.Error = ex.Message;
-                return View("~/Views/Error/Index.cshtml");
-            }
+            shippersLogic.Add(shipperModel);
+            return RedirectToAction("Index");
         }
 
         public ActionResult Update(int id, string name, string phone)
@@ -44,16 +35,8 @@ namespace Lab.Tp7.MVC.Controllers
         [HttpPost]
         public ActionResult Update(ShippersModel shipperModel)
         {
-            try
-            {
-                shippersLogic.Update(shipperModel);
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                ViewBag.Error = ex.Message;
-                return View("~/Views/Error/Index.cshtml");
-            }
+            shippersLogic.Update(shipperModel);
+            return RedirectToAction("Index");
         }
 
         public ActionResult Delete(int id)

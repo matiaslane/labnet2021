@@ -52,8 +52,10 @@
     <Compile Include="CategoriesLogic.cs" />
     <Compile Include="ICategoriesLogic.cs" />
     <Compile Include="IShippersLogic.cs" />
+    <Compile Include="IStarWarsLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShippersLogic.cs" />
+    <Compile Include="StarWarsLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +73,10 @@
     <ProjectReference Include="..\Lab.Tp7.Common\Lab.Tp7.Common.csproj">
       <Project>{2f61480c-a057-4cc7-b777-51f95bb874fa}</Project>
       <Name>Lab.Tp7.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab.Tp8.Repository.StarWars\Lab.Tp8.Repository.StarWars.csproj">
+      <Project>{6BF55DBF-91F3-4951-A031-C66DDE260076}</Project>
+      <Name>Lab.Tp8.Repository.StarWars</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
