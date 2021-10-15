@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxBootstrapConfirmService } from 'ngx-bootstrap-confirm';
+import { ToastrService } from 'ngx-toastr';
 import { ShippersService } from 'src/app/services/shippers.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class ShippersListComponent implements OnInit {
   constructor(
     private readonly router : Router,
     private shippersService : ShippersService,
-    private ngxBootstrapConfirmService: NgxBootstrapConfirmService
+    private ngxBootstrapConfirmService: NgxBootstrapConfirmService,
+    private toastrService: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -38,8 +40,9 @@ export class ShippersListComponent implements OnInit {
   listarShippers(): void {
     this.shippersService.obtenerShippers()
       .subscribe( s => {
-        this.shippersList = s},
-        (error) => alert(`No se puede borrar ${error}`)
+        this.shippersList = s
+      },
+        (error) => this.toastrService.warning(`No se puede listar - Error ${error}`)
       );
   }
 
@@ -47,8 +50,9 @@ export class ShippersListComponent implements OnInit {
     this.shippersService.deleteShippers(id)
       .subscribe(() => {
         this.listarShippers();
+        this.toastrService.success("Exito al borrar");
       },
-      error => alert(`No se puede borrar ${error}`)
+      error => this.toastrService.warning(`No se puede borrar - Error ${error}`)
     );
   }
 

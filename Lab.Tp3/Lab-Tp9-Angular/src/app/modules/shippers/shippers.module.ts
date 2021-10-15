@@ -6,6 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ControlsModule } from '../controls/controls.module';
 import { NgxBootstrapConfirmModule } from 'ngx-bootstrap-confirm';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { NgxBootstrapConfirmModule } from 'ngx-bootstrap-confirm';
     ReactiveFormsModule,
     HttpClientModule,
     ControlsModule,
-    NgxBootstrapConfirmModule
+    NgxBootstrapConfirmModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ]
 })
 export class ShippersModule { }

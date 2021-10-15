@@ -41,7 +41,7 @@ export class ShippersService {
   }
 
   errorHandler(error : HttpErrorResponse) {
-    return observableThrowError(error.message || 'Server Error');
+    return observableThrowError(error.status || 'Server Error');
   }
   
 }
