@@ -33,6 +33,9 @@ namespace Lab.Tp8.Repository.StarWars
             }
         }
 
+        // Todo
+        // metodo get para pasarle la URL y "id" para traer solamente uno.
+
         public List<PersonModel> GetPeople()
         {
 

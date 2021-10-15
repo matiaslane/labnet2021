@@ -5,12 +5,13 @@ namespace Lab.Tp7.Logic
 {
     public interface IShippersLogic
     {
+        ShippersModel Get(int id);
         List<ShippersModel> GetAll();
 
         void Add(ShippersModel shippersModel);
 
         void Delete(int id);
 
-        void Update(ShippersModel shipperModel);
+        void Update(int id, ShippersModel shipperModel);
     }
 }

@@ -8,6 +8,19 @@ namespace Lab.Tp7.Logic
 {
     public class ShippersLogic : BaseLogic, IShippersLogic
     {
+        public ShippersModel Get(int id)
+        {
+            Shippers shipper = context.Shippers.First(s => s.ShipperID == id);
+
+            ShippersModel shipperModel = new ShippersModel
+            {
+                Id = shipper.ShipperID,
+                Name = shipper.CompanyName,
+                Phone = shipper.Phone
+            };
+
+            return shipperModel;
+        }
         public List<ShippersModel>GetAll()
         {
             List<ShippersModel> shippers = context.Shippers.Select ( s => new ShippersModel
@@ -51,9 +64,9 @@ namespace Lab.Tp7.Logic
             }
         }
 
-        public void Update(ShippersModel shipperModel)
+        public void Update(int id, ShippersModel shipperModel)
         {
-            var shipperUpdate = context.Shippers.Find(shipperModel.Id);
+            var shipperUpdate = context.Shippers.Find(id);
             shipperUpdate.CompanyName = shipperModel.Name;
             shipperUpdate.Phone = shipperModel.Phone;
             context.SaveChanges();

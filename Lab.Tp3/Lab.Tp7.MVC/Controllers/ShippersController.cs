@@ -33,9 +33,9 @@ namespace Lab.Tp7.MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(ShippersModel shipperModel)
+        public ActionResult Update(int id,ShippersModel shipperModel)
         {
-            shippersLogic.Update(shipperModel);
+            shippersLogic.Update(id,shipperModel);
             return RedirectToAction("Index");
         }
 

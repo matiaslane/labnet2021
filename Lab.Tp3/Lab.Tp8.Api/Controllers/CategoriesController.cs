@@ -1,4 +1,6 @@
 ﻿using Lab.Tp7.Logic;
+using System;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace Lab.Tp8.Api.Controllers
@@ -7,13 +9,23 @@ namespace Lab.Tp8.Api.Controllers
     {
         ICategoriesLogic categoriesLogic = new CategoriesLogic();   
         
-        [Route("categories")]
+        [Route("api/categories")]
         [HttpGet]
         public IHttpActionResult Get()
         {
-            var response = categoriesLogic.GetAll();
-
-            return Ok(response);
+            try
+            {
+                var response = categoriesLogic.GetAll();
+                if(response == null)
+                {
+                    return StatusCode(System.Net.HttpStatusCode.BadRequest);
+                }
+                return Ok(response);
+            }
+            catch (Exception)
+            {
+                return StatusCode(System.Net.HttpStatusCode.Unauthorized);
+            }
         }
     }
 }

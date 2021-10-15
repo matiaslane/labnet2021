@@ -1,6 +1,6 @@
 ﻿using Lab.Tp7.Common.Models;
 using Lab.Tp7.Logic;
-using System.Collections.Generic;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace Lab.Tp8.Api.Controllers
@@ -9,39 +9,100 @@ namespace Lab.Tp8.Api.Controllers
     {
         IShippersLogic shippersLogic = new ShippersLogic();
 
-        [Route("shippers")]
+        [Route("api/shippers")]
         [HttpGet]
         public IHttpActionResult Get()
         {
-            var response = shippersLogic.GetAll();
-            return Ok(response);
+            try
+            {
+                var response = shippersLogic.GetAll();
+                if (response != null)
+                {
+                    return Ok(response);
+                }
+                return StatusCode(System.Net.HttpStatusCode.BadRequest);
+            }
+            catch (System.Exception)
+            {
+                return StatusCode(System.Net.HttpStatusCode.Unauthorized);
+            }
         }
 
-        [Route("shippers/add")]
+        [Route("api/shippers/{id}")]
+        [HttpGet]
+        public IHttpActionResult GetById(int id)
+        {
+            try
+            {
+                if (shippersLogic.Get(id) != null)
+                {
+                    var response = shippersLogic.Get(id);
+                    return Ok(response);
+                }
+                return StatusCode(System.Net.HttpStatusCode.BadRequest);
+            }
+            catch (System.Exception) 
+            {
+                return StatusCode(System.Net.HttpStatusCode.Unauthorized);
+            }
+        }
+
+        [Route("api/shippers/add")]
         [HttpPost]
         public IHttpActionResult Insert(ShippersModel shipperModel)
         {
-            shippersLogic.Add(shipperModel);
-            return Ok("Exito");
+            try
+            {
+                if (shipperModel != null)
+                {
+                    shippersLogic.Add(shipperModel);
+                    return Ok("Exito");
+                }
+                return StatusCode(System.Net.HttpStatusCode.BadRequest);
+            }
+            catch (System.Exception)
+            {
+                return StatusCode(System.Net.HttpStatusCode.Unauthorized);
+            }
         }
 
-        [Route("shippers/update")]
+        [Route("api/shippers/update/{id}")]
         [HttpPut]
-        public IHttpActionResult Update(ShippersModel shipperModel)
+        public IHttpActionResult Update(int id, ShippersModel shipperModel)
         {
-            shippersLogic.Update(shipperModel);
-            return Ok("Exito");
+            try
+            {
+                if ((shippersLogic.Get(id) != null) && shipperModel != null)
+                {
+                    shippersLogic.Update(id,shipperModel);
+                    return Ok("Exito");
+                }
+                return StatusCode(System.Net.HttpStatusCode.BadRequest);
+            }
+            catch (System.Exception)
+            {
+                return StatusCode(System.Net.HttpStatusCode.Unauthorized);
+
+            }
         }
 
-        [Route("shippers/delete")]
+        [Route("api/shippers/delete/{id}")]
         [HttpDelete]
         public IHttpActionResult Delete(int id)
         {
-            shippersLogic.Delete(id);
-            return Ok("Exito");
+            try
+            {
+                if (shippersLogic.Get(id) != null)
+                {
+                shippersLogic.Delete(id);
+                return Ok("Exito");
+                }
+                return StatusCode(System.Net.HttpStatusCode.BadRequest);
+            }
+            catch (System.Exception)
+            {
+                return StatusCode(System.Net.HttpStatusCode.Unauthorized);
+            }
         }
-
-
-
     }
 }

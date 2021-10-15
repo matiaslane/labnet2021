@@ -15,17 +15,7 @@ namespace Lab.Tp8.Api
     {
         public void OnException(ExceptionContext filterContext)
         {
-
-            var result = new ViewResult
-            {
-                ViewName = "~/Views/Error/Index.cshtml"
-            };
-
-            result.ViewData = new ViewDataDictionary<HandleErrorInfo>(filterContext.Controller.ViewData);
-            result.ViewData.Add("Error", filterContext.Exception.Message);
-
-            filterContext.Result = result;
-            filterContext.ExceptionHandled = true;
+            var result = filterContext.HttpContext.Response.StatusCode;
         }
     }
 }

@@ -1,0 +1,16 @@
+<table class="table"> 
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+        </tr>
+    </thead>
+    <tbody> 
+        <tr *ngFor="let cat of categoriesList; let i = index">
+            <th scope="row">{{i}}</th>
+            <td>{{cat.Name}}</td>
+            <td>{{cat.Description}}</td>    
+        </tr>
+    </tbody>
+</table>
