@@ -1,0 +1,4 @@
+<button [disabled]="isLoadingFlag" class="btn btn-primary {{class}}">
+    <span *ngIf="isLoadingFlag" class="spinner-border spinner-border-sm mr-1" ></span>
+    {{buttonText}}
+</button>
